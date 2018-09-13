@@ -92,7 +92,7 @@ export class Login {
     }
 
     create(firstName: string, lastName: string, email: string, emailConfirm: string,
-                  password: string, passwordConfirm: string, companyId: number, admin: boolean): Promise<ResponseMessage> {
+                  password: string, passwordConfirm: string, admin: boolean): Promise<ResponseMessage> {
         const obj = new ResponseMessage();
         const _this = this;
         const messages: string[] = [];
@@ -129,10 +129,6 @@ export class Login {
             messages.push('Password and password confirmation must match.');
         }
 
-        if (companyId < 1) {
-            messages.push('You must provide a valid company.');
-        }
-
         if (messages.length > 0) {
             obj.data = messages;
             return new Promise((resolve, reject) => {
@@ -153,10 +149,10 @@ export class Login {
                     } else {
                         _this.opsLogger.debug('Creating user');
                         sql = 'insert into ?? (??, ??, ??, ??, ??, ??, ??, ??, ??, ??) ' +
-                            'values (lower(trim(?)), trim(?), trim(?), sha2(?, 512), ?, ?, ?, ?, current_timestamp, ?)';
-                        params = ['user', 'email', 'first_name', 'last_name', 'password_hash', 'activated', 'company_id',
+                            'values (lower(trim(?)), trim(?), trim(?), sha2(?, 512), ?, ?, ?, current_timestamp, ?)';
+                        params = ['user', 'email', 'first_name', 'last_name', 'password_hash', 'activated',
                             'activation_key', 'created_by', 'created_date', 'deleted',
-                            email, firstName, lastName, password, 0, companyId, activationKey, 'system',
+                            email, firstName, lastName, password, 0, activationKey, 'system',
                             0];
                         sql = format(sql, params);
                         return connection.query(sql).then((rows) => {

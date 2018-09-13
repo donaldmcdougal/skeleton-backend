@@ -69,7 +69,7 @@ export class AccountRouter {
             Token.verifyAdminToken(req).then(msg => {
                 if (msg.success === 1) {
                     login.create(req.body.first_name, req.body.last_name, req.body.email, req.body.email_confirm,
-                        req.body.password, req.body.password_confirm, req.body.company_id, req.body.admin).then(msg => {
+                        req.body.password, req.body.password_confirm, req.body.admin).then(msg => {
                         res.json(msg);
                     });
                 } else {
