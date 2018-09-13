@@ -1,0 +1,64 @@
+{
+  "name": "skeleton-backend",
+  "version": "0.1.0",
+  "description": "A skeleton for a NodeJS application that includes JWT authentication and administrator capabilities.",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node dist/server.js",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donaldmcdougal/skeleton-backend.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "starter",
+    "JWT",
+    "authentication"
+  ],
+  "author": "John Schneider",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/donaldmcdougal/skeleton-backend/issues"
+  },
+  "homepage": "https://github.com/donaldmcdougal/skeleton-backend#readme",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-bearer-token": "^2.2.0",
+    "express-validator": "^5.3.0",
+    "jsonwebtoken": "^8.3.0",
+    "log4js": "^3.0.5",
+    "moment": "^2.22.2",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.6.8",
+    "promise-mysql": "^3.3.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.24",
+    "@types/body-parser": "^1.17.0",
+    "@types/compression": "0.0.36",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.0",
+    "@types/jsonwebtoken": "^7.2.8",
+    "@types/mysql": "^2.15.5",
+    "@types/node": "^10.9.4",
+    "@types/nodemailer": "^4.6.4",
+    "@types/request": "^2.47.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "npm-run-all": "^4.1.3",
+    "ts-lint": "^4.5.1",
+    "ts-loader": "^5.1.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "webpack": "^4.18.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

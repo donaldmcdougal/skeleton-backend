@@ -1,0 +1,17 @@
+JWT_SECRET_PATH=key.jwt
+JWT_EXPIRES_IN_PATH=expires_in.jwt
+CONTACT_EMAIL=youremail@example.com
+BASE_WEB_CLIENT_URL=http://localhost:4200/
+DB_HOST=localhost
+DB_USER='root'
+DB_NAME='db'
+DB_PASSWORD='root'
+DB_POOL_CONNECTION_LIMIT='10'
+EMAIL_TRANSPORT_SERVICE = 'gmail'
+EMAIL_USERNAME='email@example.com'
+EMAIL_PASSWORD='qqqqqqqqqqqqqqqq'
+SERVER_KEY_PATH=server.key
+SERVER_CERT_PATH=server.crt
+SERVER_CERT_CA_PATH=
+LOGGER_LEVEL=debug
+PORT=8472
