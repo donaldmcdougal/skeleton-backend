@@ -1,6 +1,6 @@
-CREATE DATABASE `db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
+CREATE DATABASE `testdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
 
-USE `db`;
+USE `testdb`;
 
 CREATE TABLE `authority` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -30,9 +30,7 @@ CREATE TABLE `user` (
   `deleted` bit(1) NOT NULL DEFAULT b'0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ux_user_email` (`email`),
-  KEY `idx_user_deleted` (`deleted`),
-  KEY `fk_user_company_id` (`company_id`),
-  CONSTRAINT `fk_user_company_id` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`)
+  KEY `idx_user_deleted` (`deleted`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO `user` (password_hash, first_name, last_name, email, activated, created_by, created_date, deleted) VALUES

@@ -1,6 +1,6 @@
 {
   "name": "skeleton-backend",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A skeleton for a NodeJS application that includes JWT authentication and administrator capabilities.",
   "main": "src/server.ts",
   "scripts": {
